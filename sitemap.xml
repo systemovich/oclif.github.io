@@ -8,4 +8,6 @@
 <url> <loc>https://oclif.github.io/blog/2016/03/11/blog-post.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://oclif.github.io/docs/introduction.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/introduction.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/multi.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/multi.html" /> </url>
+<url> <loc>https://oclif.github.io/docs/releasing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/releasing.html" /> </url>
+<url> <loc>https://oclif.github.io/docs/single.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/single.html" /> </url>
 </urlset>
