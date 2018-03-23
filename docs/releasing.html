@@ -5,7 +5,8 @@
             nav.classList.toggle('docsSliderActive');
           };
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/oclif/oclif.github.io/tree/docs/docs/releasing.md" target="_blank">Edit</a><h1>Releasing your CLI</h1></header><article><div><span><p>When you're ready to release your CLI, simply publish to npm:</p>
-<pre><code class="hljs css sh-session"><span class="hljs-meta">$</span><span class="bash"> npm publish</span>
+<pre><code class="hljs css sh-session"><span class="hljs-meta">$</span><span class="bash"> npm version (major|minor|patch) <span class="hljs-comment"># bumps version, updates README, adds git tag</span></span>
+<span class="hljs-meta">$</span><span class="bash"> npm publish</span>
 <span class="hljs-meta">$</span><span class="bash"> npm install -g mynewcli</span>
 <span class="hljs-meta">$</span><span class="bash"> mynewcli</span>
 <span class="hljs-meta">#</span><span class="bash"> OR</span>
