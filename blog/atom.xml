@@ -6,7 +6,7 @@
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
-    <logo>https://oclif.github.io/undefined</logo>
+    <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
     <rights>Copyright © 2018 Salesforce.com</rights>
     <entry>
         <title type="html"><![CDATA[Introducing oclif]]></title>
