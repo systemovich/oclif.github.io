@@ -7775,3 +7775,6 @@ header .logo {
 
 .homepage p {
   text-align: left; }
+
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
+  color: rgba(255, 255, 255, 0.8); }
