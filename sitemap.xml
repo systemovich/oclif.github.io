@@ -8,6 +8,7 @@
 <url> <loc>https://oclif.github.io/docs/command.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/command.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/examples.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/examples.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/external_links.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/external_links.html" /> </url>
+<url> <loc>https://oclif.github.io/docs/faqs.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/faqs.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/features.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/features.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/feedback.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/feedback.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/flags.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/flags.html" /> </url>
