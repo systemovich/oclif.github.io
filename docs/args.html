@@ -29,10 +29,10 @@
     <span class="hljs-attr">name</span>: <span class="hljs-string">'file'</span>,                  <span class="hljs-comment">// name of arg to show in help and reference with args[name]</span>
     required: <span class="hljs-literal">false</span>,               <span class="hljs-comment">// make the arg required with `required: true`</span>
     description: <span class="hljs-string">'file to output'</span>, <span class="hljs-comment">// help description</span>
-    <span class="hljs-comment">// hidden: true,               // hide this arg from help</span>
-    <span class="hljs-comment">// parse: input =&gt; 'output',   // instead of the user input, return a different value</span>
-    <span class="hljs-comment">// default: 'world',           // default value if no arg input</span>
-    <span class="hljs-comment">// options: ['a', 'b'],        // only allow input to be from a discrete set</span>
+    hidden: <span class="hljs-literal">true</span>,                  <span class="hljs-comment">// hide this arg from help</span>
+    parse: <span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> <span class="hljs-string">'output'</span>,      <span class="hljs-comment">// instead of the user input, return a different value</span>
+    <span class="hljs-keyword">default</span>: <span class="hljs-string">'world'</span>,              <span class="hljs-comment">// default value if no arg input</span>
+    options: [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>],           <span class="hljs-comment">// only allow input to be from a discrete set</span>
   }
 ]
 </code></pre>

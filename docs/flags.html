@@ -32,11 +32,11 @@
     description: <span class="hljs-string">'name to print'</span>, <span class="hljs-comment">// help description for flag</span>
     hidden: <span class="hljs-literal">false</span>,                <span class="hljs-comment">// hide from help</span>
     multiple: <span class="hljs-literal">false</span>,              <span class="hljs-comment">// allow setting this flag multiple times</span>
-    <span class="hljs-comment">// env: 'MY_NAME',            // default to value of environment variable</span>
-    <span class="hljs-comment">// options: ['a', 'b'],       // only allow the value to be from a discrete set</span>
-    <span class="hljs-comment">// parse: input =&gt; 'output',  // instead of the user input, return a different value</span>
-    <span class="hljs-comment">// default: 'world',          // default value if flag not passed</span>
-    <span class="hljs-comment">// required: false,           // make flag required (this is not common and you should probably use an argument instead)</span>
+    env: <span class="hljs-string">'MY_NAME'</span>,               <span class="hljs-comment">// default to value of environment variable</span>
+    options: [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>],          <span class="hljs-comment">// only allow the value to be from a discrete set</span>
+    parse: <span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> <span class="hljs-string">'output'</span>,     <span class="hljs-comment">// instead of the user input, return a different value</span>
+    <span class="hljs-keyword">default</span>: <span class="hljs-string">'world'</span>,             <span class="hljs-comment">// default value if flag not passed</span>
+    required: <span class="hljs-literal">false</span>,              <span class="hljs-comment">// make flag required (this is not common and you should probably use an argument instead)</span>
   }),
 
   <span class="hljs-comment">// flag with no value (-f, --force)</span>
