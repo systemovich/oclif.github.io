@@ -19,7 +19,7 @@
             <guid>https://oclif.github.io/blog/2018/03/20/introducing-oclif.html</guid>
             <pubDate>Tue, 20 Mar 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p><img src="/img/2018-03-20-introducing-oclif/header.png" alt="Introducing oclif"></p>
-<p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the effort. This makes CLIs particularly great for prototyping out new functionality, offering admin/internal tools, or power-user functionality.</p>
+<p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the eff</p>
 ]]></description>
         </item>
     </channel>

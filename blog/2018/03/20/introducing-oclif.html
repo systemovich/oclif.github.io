@@ -6,76 +6,7 @@
           };
         </script></nav></div><div class="container mainContainer documentContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1><a href="/blog/2018/03/20/introducing-oclif.html">Introducing oclif</a></h1><p class="post-meta">March 20, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="https://twitter.com/jdxcode" target="_blank">Jeff Dickey</a></p><div class="authorPhoto"><a href="https://twitter.com/jdxcode" target="_blank"><img src="https://graph.facebook.com/42004440/picture/?height=200&amp;width=200"/></a></div></div></header><div><span><p><img src="/img/2018-03-20-introducing-oclif/header.png" alt="Introducing oclif"></p>
 <p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the effort. This makes CLIs particularly great for prototyping out new functionality, offering admin/internal tools, or power-user functionality.</p>
-<!--truncate-->
-<p>CLIs have a much smaller footprint as well. Less code and fewer dependencies mean there is less to maintain. The code you write today is much more likely to work tomorrow in a CLI than it would be in the browser—Chrome changes far more often than Bash. Security is also much less of an issue as the code is running on the user’s machine and not on a sensitive platform amongst other users.</p>
-<p>APIs are wonderful. We’re lucky to live in a world where building a modern web application often involves building a JSON API to sit alongside it both to work with modern JS frameworks like Angular and React, but also to support mobile platforms. Assuming you have a setup like this, adding on a CLI will slide right into your existing architecture.</p>
-<p>If you have a public API, a CLI would be a huge help to users that want to consume it. For a quick task, we can use cURL and tools like <a href="https://stedolan.github.io/jq/">jq</a>, but doing so always requires some docs research and learning how to make authentication work. It’s a solid effort even for the best designed APIs. Rather than researching all of this, it’s much easier to install a CLI, fire it up, run mycli --help run a login command and perform our task.</p>
-<p>To help you on this path, I’m happy to announce today we <a href="https://blog.heroku.com/open-cli-framework">released</a> the framework the <a href="http://cli.heroku.com">Heroku CLI</a> and <a href="https://developer.salesforce.com/tools/sfdxcli">Salesforce DX</a> is based on to let anyone build their own custom CLI. We call it: <a href="http://oclif.io">oclif</a>.</p>
-<h2><a class="anchor" aria-hidden="true" id="oclif"></a><a href="#oclif" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif</h2>
-<p>oclif is a Node.js based CLI framework designed for simple CLIs and very large CLIs. Here are some of the highlights:</p>
-<ul>
-<li><p><strong>Performance:</strong> oclif uses very few dependencies and much care is taken to ensure the overhead is virtually nil.</p></li>
-<li><p><strong>CLI Generator:</strong> Run a single command to scaffold out a new CLI.</p></li>
-<li><p><strong>Automatic Doc Generation:</strong> Your users need to learn how to use your CLI. It will automatically have help generated with--help as well as a README with all the flags and arg options in your CLI.</p></li>
-<li><p><strong>Testing:</strong> As you build a CLI we’ll automatically drop in stubbed tests that make it easy to stub out API calls and output. We feel it’s crucial to make it easy to write tests in order to keep you focused on delivering your functionality.</p></li>
-<li><p><strong><a href="https://github.com/oclif/oclif#-features">And more.</a></strong></p></li>
-</ul>
-<h2><a class="anchor" aria-hidden="true" id="why-node"></a><a href="#why-node" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why Node?</h2>
-<p>Node has a number of practical advantages. It’s got more open source libraries than any other language that can be used, it offers great performance compared to other scripting languages, and it runs well on every platform including Windows. I’ve had experience writing the <a href="https://blog.heroku.com/evolution-of-heroku-cli-2008-2017">Heroku CLI in Ruby and Go</a> as well and I can say without question that using Node is a dream.</p>
-<p>JavaScript has quickly become the lingua franca of the web. Compared to all other languages: JavaScript can be written by more people. I think for a CLI it’s important that anyone can jump in and start hacking on a new command and contribute back. Using a language that everyone knows (even if they don’t know it well) has a huge advantage.</p>
-<p>Truthfully though, for almost all CLIs you’re likely to write, it’s not likely to contain much complex code. Performance isn’t generally a big issue as you’re usually waiting on an API call and memory leaks basically don’t even matter as a CLI command runs once then quits. Compared to writing front-end or a back-end system, CLI code just isn’t that complicated. The language choice matters less here; you just have to be able to write the basics.</p>
-<p>We’re a big fan of TypeScript and oclif itself is fully written in TypeScript. We find it leads to a friendly development experience with more writing code and less debugging. You have the option of building CLIs in standard Node without TypeScript, but the syntax in TypeScript is quite a bit cleaner. We definitely encourage you to use TypeScript.</p>
-<h2><a class="anchor" aria-hidden="true" id="an-example"></a><a href="#an-example" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>An Example</h2>
-<iframe src="https://player.vimeo.com/video/260885052" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/260885052">oclif: githubcli</a> from <a href="https://vimeo.com/jdxcode">jdxcode</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-<p>I’d like to create a simple example with oclif to build a CLI for GitHub to show the users that have starred a repo. First, let’s create a multi-CLI so we have the option to add more commands to this CLI later.</p>
-<pre><code class="hljs css sh-session"><span class="hljs-variable">$ </span>npx oclif multi githubcli
-...
-Created githubcli <span class="hljs-keyword">in</span> ~<span class="hljs-regexp">/src/githubcli</span>
-</code></pre>
-<p><em>Note that all you need to have installed is a recent version of npm. npx is included and will automatically install and run the oclif generator.</em></p>
-<p>We can run this CLI with its example command by running:</p>
-<pre><code class="hljs css sh-session">$ ./bin/<span class="hljs-keyword">run</span><span class="bash"> hello
-</span>hello world <span class="hljs-keyword">from</span> ./src/commands/hello.ts!
-</code></pre>
-<p>Now we can create a stars command we’ll use to show the users that have starred a project. We’ll also add in <a href="https://www.npmjs.com/package/axios">axios</a> to make the HTTP call to GitHub.</p>
-<pre><code class="hljs css sh-session"><span class="hljs-meta">$</span><span class="bash"> npx oclif <span class="hljs-built_in">command</span> stars</span>
-<span class="hljs-meta">$</span><span class="bash"> yarn add axios</span>
-<span class="hljs-meta">$</span><span class="bash"> yarn add --dev @types/axios</span>
-</code></pre>
-<p>Now, open ./src/commands/stars.ts and replace the contents with the following:</p>
-<pre><code class="hljs css typescript"><span class="hljs-keyword">import</span> {Command} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/command'</span>
-<span class="hljs-keyword">import</span> axios <span class="hljs-keyword">from</span> <span class="hljs-string">'axios'</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">class</span> Stars <span class="hljs-keyword">extends</span> Command {
-  <span class="hljs-keyword">static</span> description = <span class="hljs-string">'show the github stars on a repository'</span>
-  <span class="hljs-keyword">static</span> args = [
-    {
-      name: <span class="hljs-string">'repository'</span>,
-      required: <span class="hljs-literal">true</span>
-    }
-  ]
-
-  <span class="hljs-keyword">async</span> run() {
-    <span class="hljs-keyword">const</span> {args} = <span class="hljs-keyword">this</span>.parse(Stars)
-    <span class="hljs-keyword">const</span> {data: stargazers} = <span class="hljs-keyword">await</span> axios.get(<span class="hljs-string">`https://api.github.com/repos/<span class="hljs-subst">${args.repository}</span>/stargazers`</span>)
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> s of stargazers) {
-      <span class="hljs-keyword">this</span>.log(s.login)
-    }
-  }
-}
-</code></pre>
-<p>Lastly, run the command:</p>
-<pre><code class="hljs css sh-session">$ ./bin/<span class="hljs-keyword">run</span><span class="bash"> stars oclif/oclif
-</span>jdxcode
-usera
-userb
-userc
-...
-</code></pre>
-<p>We’ve got a functioning CLI! All we need to publish this for others to use is to run npm publish. <a href="https://github.com/oclif/githubcli">Here is the complete example</a>.</p>
-<p><em>Note that this example does not implement pagination so we only get the first few stars of a repo. It also doesn’t use use a GitHub OAuth token so the rate limit is low.</em></p>
-<p>I hope you get a chance to try out oclif for your own project! For more information, check the <a href="http://oclif.io/docs/introduction.html">oclif documentation</a>.</p>
+<p><a class="button" href="https://engineering.salesforce.com/open-sourcing-oclif-the-cli-framework-that-powers-our-clis-21fbda99d33a">Read More</a></p>
 </span></div></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by Heroku</div></footer></div><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
