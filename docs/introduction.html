@@ -13,11 +13,11 @@
 <p>With oclif you can create 2 different CLI types, single and multi.</p>
 <p>Single CLIs are like <code>ls</code> or <code>cat</code>. They can accept arguments and flags. Single CLIs can <a href="https://github.com/oclif/command">optionally be just be a single file</a>.</p>
 <p>Multi CLIs are like <code>git</code> or <code>heroku</code>. They have subcommands that are themselves single CLIs. In the <code>package.json</code> there is a field <code>oclif.commands</code> that points to a directory. This directory contains all the subcommands for the CLI. For example, if you had a CLI called <code>mycli</code> with the commands <code>mycli create</code> and <code>mycli destroy</code>, you would have a project like the following:</p>
-<pre><code class="hljs css plain">package<span class="hljs-selector-class">.json</span>
+<pre><code class="hljs css bash">package.json
 src/
 └── commands/
-    ├── create<span class="hljs-selector-class">.ts</span>
-    └── destroy<span class="hljs-selector-class">.ts</span>
+    ├── create.ts
+    └── destroy.ts
 </code></pre>
 <p>Multi-command CLIs may also include <a href="/docs/plugins.html">plugins</a>.</p>
 <p><a href="single.html" class="button">Single-command CLI</a>
