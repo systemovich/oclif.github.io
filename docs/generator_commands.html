@@ -7,12 +7,12 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/oclif/oclif.github.io/tree/docs/docs/generator_commands.md" target="_blank">Edit</a><h1>Generator Commands</h1></header><article><div><span><!-- this is auto-generated from the oclif readme -->
 <!-- commands -->
 <ul>
-<li><a href="#command-name">oclif command NAME</a></li>
-<li><a href="#help-command">oclif help [COMMAND]</a></li>
-<li><a href="#hook-name">oclif hook NAME</a></li>
-<li><a href="#multi-path">oclif multi [PATH]</a></li>
-<li><a href="#plugin-path">oclif plugin [PATH]</a></li>
-<li><a href="#single-path">oclif single [PATH]</a></li>
+<li><a href="#oclif-command-name">oclif command NAME</a></li>
+<li><a href="#oclif-help-command">oclif help [COMMAND]</a></li>
+<li><a href="#oclif-hook-name">oclif hook NAME</a></li>
+<li><a href="#oclif-multi-path">oclif multi [PATH]</a></li>
+<li><a href="#oclif-plugin-path">oclif plugin [PATH]</a></li>
+<li><a href="#oclif-single-path">oclif single [PATH]</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="oclif-command-name"></a><a href="#oclif-command-name" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif command NAME</h2>
 <p>add a command to an existing CLI or plugin</p>
@@ -26,7 +26,7 @@ OPTIONS
   <span class="hljs-comment">--defaults  use defaults for every setting</span>
   <span class="hljs-comment">--force     overwrite existing files</span>
 </code></pre>
-<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.2/src/commands/command.ts">src/commands/command.ts</a></em></p>
+<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.3/src/commands/command.ts">src/commands/command.ts</a></em></p>
 <h2><a class="anchor" aria-hidden="true" id="oclif-help-command"></a><a href="#oclif-help-command" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif help [COMMAND]</h2>
 <p>display help for oclif</p>
 <pre><code class="hljs">USAGE
@@ -38,7 +38,7 @@ ARGUMENTS
 OPTIONS
   --<span class="hljs-keyword">all</span>  see <span class="hljs-keyword">all</span> commands in CLI
 </code></pre>
-<p><em>See code: <a href="https://github.com/oclif/plugin-help/blob/v1.1.6/src/commands/help.ts">@oclif/plugin-help</a></em></p>
+<p><em>See code: <a href="https://github.com/oclif/plugin-help/blob/v1.1.7/src/commands/help.ts">@oclif/plugin-help</a></em></p>
 <h2><a class="anchor" aria-hidden="true" id="oclif-hook-name"></a><a href="#oclif-hook-name" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif hook NAME</h2>
 <p>add a hook to an existing CLI or plugin</p>
 <pre><code class="hljs">USAGE
@@ -52,7 +52,7 @@ OPTIONS
   --event=event  [<span class="hljs-keyword">default</span>: init] event <span class="hljs-keyword">to</span> run hook <span class="hljs-keyword">on</span>
   --force        overwrite existing files
 </code></pre>
-<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.2/src/commands/hook.ts">src/commands/hook.ts</a></em></p>
+<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.3/src/commands/hook.ts">src/commands/hook.ts</a></em></p>
 <h2><a class="anchor" aria-hidden="true" id="oclif-multi-path"></a><a href="#oclif-multi-path" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif multi [PATH]</h2>
 <p>generate a new multi-command CLI</p>
 <pre><code class="hljs">USAGE
@@ -66,7 +66,7 @@ OPTIONS
 </span>  -<span class="ruby">-force            overwrite existing files
 </span>  -<span class="ruby">-options=options  (yarn<span class="hljs-params">|typescript|</span>tslint<span class="hljs-params">|semantic-release|</span>mocha)
 </span></code></pre>
-<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.2/src/commands/multi.ts">src/commands/multi.ts</a></em></p>
+<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.3/src/commands/multi.ts">src/commands/multi.ts</a></em></p>
 <h2><a class="anchor" aria-hidden="true" id="oclif-plugin-path"></a><a href="#oclif-plugin-path" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif plugin [PATH]</h2>
 <p>create a new CLI plugin</p>
 <pre><code class="hljs">USAGE
@@ -80,7 +80,7 @@ OPTIONS
 </span>  -<span class="ruby">-force            overwrite existing files
 </span>  -<span class="ruby">-options=options  (yarn<span class="hljs-params">|typescript|</span>tslint<span class="hljs-params">|semantic-release|</span>mocha)
 </span></code></pre>
-<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.2/src/commands/plugin.ts">src/commands/plugin.ts</a></em></p>
+<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.3/src/commands/plugin.ts">src/commands/plugin.ts</a></em></p>
 <h2><a class="anchor" aria-hidden="true" id="oclif-single-path"></a><a href="#oclif-single-path" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oclif single [PATH]</h2>
 <p>generate a new single-command CLI</p>
 <pre><code class="hljs">USAGE
@@ -94,7 +94,7 @@ OPTIONS
 </span>  -<span class="ruby">-force            overwrite existing files
 </span>  -<span class="ruby">-options=options  (yarn<span class="hljs-params">|typescript|</span>tslint<span class="hljs-params">|semantic-release|</span>mocha)
 </span></code></pre>
-<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.2/src/commands/single.ts">src/commands/single.ts</a></em></p>
+<p><em>See code: <a href="https://github.com/oclif/oclif/blob/v1.5.3/src/commands/single.ts">src/commands/single.ts</a></em></p>
 <!-- commandsstop -->
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="releasing.html">← Releasing your CLI</a><a class="docs-next button" href="commands.html">Commands →</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by Heroku</div></footer></div><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
