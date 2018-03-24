@@ -22,7 +22,7 @@
 <pre><code class="hljs css js">  <span class="hljs-string">"oclif"</span>: {
     <span class="hljs-string">"commands"</span>: <span class="hljs-string">"./lib/commands"</span>,
     <span class="hljs-string">"hooks"</span>: {
-      <span class="hljs-string">"init"</span>: <span class="hljs-string">"./lib/hooks/init/example.js"</span>
+      <span class="hljs-string">"init"</span>: <span class="hljs-string">"./lib/hooks/init/example"</span>
     }
     <span class="hljs-comment">//...</span>
   }
@@ -32,8 +32,8 @@
     <span class="hljs-string">"commands"</span>: <span class="hljs-string">"./lib/commands"</span>,
     <span class="hljs-string">"hooks"</span>: {
       <span class="hljs-string">"init"</span>: [
-        <span class="hljs-string">"./lib/hooks/init/example.js"</span>,
-        <span class="hljs-string">"./lib/hooks/init/another_hook.js"</span>
+        <span class="hljs-string">"./lib/hooks/init/example"</span>,
+        <span class="hljs-string">"./lib/hooks/init/another_hook"</span>
       ]
     }
     <span class="hljs-comment">//...</span>
@@ -60,7 +60,7 @@
 <pre><code class="hljs css js">  <span class="hljs-string">"oclif"</span>: {
     <span class="hljs-string">"commands"</span>: <span class="hljs-string">"./lib/commands"</span>,
     <span class="hljs-string">"hooks"</span>: {
-      <span class="hljs-string">"analytics"</span>: <span class="hljs-string">"./lib/hooks/analytics/post.js"</span>
+      <span class="hljs-string">"analytics"</span>: <span class="hljs-string">"./lib/hooks/analytics/post"</span>
     },
     <span class="hljs-comment">//...</span>
   },
