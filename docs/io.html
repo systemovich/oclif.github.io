@@ -9,8 +9,23 @@
 <p>Output message to stdout.</p>
 <pre><code class="hljs css typescript"><span class="hljs-keyword">this</span>.log(<span class="hljs-string">'hello, world!'</span>)
 </code></pre>
+<h3><a class="anchor" aria-hidden="true" id="thiswarnmessage-string-error"></a><a href="#thiswarnmessage-string-error" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>this.warn(message: string | Error)</h3>
+<p>Display an error or message as a warning</p>
+<pre><code class="hljs css typescript"><span class="hljs-keyword">this</span>.warn(<span class="hljs-string">'uh oh!'</span>)
+<span class="hljs-keyword">this</span>.warn(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'uh oh!'</span>))
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="thiserrormessage-string-error-options-code-string-exit-number"></a><a href="#thiserrormessage-string-error-options-code-string-exit-number" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>this.error(message: string | Error, options: {code?: string, exit?: number})</h3>
+<p>Display error and exit. Also add a code to error object or exit status.</p>
+<pre><code class="hljs css typescript"><span class="hljs-keyword">this</span>.error(<span class="hljs-string">'uh oh!'</span>, {exit: <span class="hljs-number">2</span>})
+<span class="hljs-keyword">this</span>.error(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">'uh oh!'</span>))
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="thisexitcode-number-0"></a><a href="#thisexitcode-number-0" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>this.exit(code: number = 0)</h3>
+<p>Exit process. Defaults to status 0.</p>
+<pre><code class="hljs css typescript"><span class="hljs-keyword">this</span>.exit()
+<span class="hljs-keyword">this</span>.exit(<span class="hljs-number">1</span>)
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="cli-ux"></a><a href="#cli-ux" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cli-ux</h3>
 <p>Common I/O utilities are provided via <a href="https://github.com/oclif/cli-ux">cli-ux</a>. These don't necessarily have to be used with oclif if you'd like to use them in another project.</p>
-<p><strong>TODO: Finish this bit</strong></p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="flags.html">← Command Flags</a><a class="docs-next button" href="topics.html">Topics →</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by Heroku</div></footer></div><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
