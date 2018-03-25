@@ -7820,10 +7820,5 @@ nav.toc a.navItem {
 nav.toc .toggleNav ul li a.navItemActive {
   color: #42aecc; }
 
-.mainContainer {
-  background-color: #fff; }
-  .mainContainer .wrapper .post h3 {
-    font-size: 140%; }
-
 .docMainWrapper article h3 > code {
   line-height: 1.2; }
