@@ -50,9 +50,7 @@
 <p>Custom events are just like lifecycle events, but you need to call <code>this.config.runHook()</code> to fire the event.</p>
 <p>For example, you could define an analytics post function that you will run in your command. First define:</p>
 <p><strong>src/hooks/post_analytics.ts</strong></p>
-<pre><code class="hljs css js"><span class="hljs-keyword">import</span> {Hook} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/config'</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> hook = <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">opts</span>) </span>{
+<pre><code class="hljs css js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> hook = <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">opts</span>) </span>{
   <span class="hljs-comment">// code to post opts.id to analytics server</span>
 }
 </code></pre>
