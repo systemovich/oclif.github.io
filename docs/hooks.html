@@ -24,7 +24,6 @@
     <span class="hljs-string">"hooks"</span>: {
       <span class="hljs-string">"init"</span>: <span class="hljs-string">"./lib/hooks/init/example"</span>
     }
-    <span class="hljs-comment">//...</span>
   }
 </code></pre>
 <p>Multiple hooks of the same event type can be declared with an array.</p>
@@ -36,7 +35,6 @@
         <span class="hljs-string">"./lib/hooks/init/another_hook"</span>
       ]
     }
-    <span class="hljs-comment">//...</span>
   }
 </code></pre>
 <p>You can create hooks with <code>oclif hook myhook --event=init</code>.</p>
@@ -50,9 +48,7 @@
 <p>Custom events are just like lifecycle events, but you need to call <code>this.config.runHook()</code> to fire the event.</p>
 <p>For example, you could define an analytics post function that you will run in your command after submitting analytics telemetry. First define:</p>
 <p><strong>src/hooks/post_analytics.ts</strong></p>
-<pre><code class="hljs css typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Config <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/config'</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> hook = <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options: {id: <span class="hljs-built_in">string</span>, config: Config.IConfig}</span>) </span>{
+<pre><code class="hljs css typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">const</span> hook = <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options: {id: <span class="hljs-built_in">string</span>}</span>) </span>{
   <span class="hljs-comment">// code to post options.id to analytics server</span>
 }
 </code></pre>
@@ -62,19 +58,15 @@
     <span class="hljs-string">"hooks"</span>: {
       <span class="hljs-string">"analytics"</span>: <span class="hljs-string">"./lib/hooks/analytics/post"</span>
     },
-    <span class="hljs-comment">//...</span>
   },
 </code></pre>
 <p>Then in any command you want to trigger the event:</p>
-<pre><code class="hljs css js"><span class="hljs-comment">//...</span>
-<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Command</span> </span>{
+<pre><code class="hljs css js"><span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Command</span> </span>{
   <span class="hljs-keyword">async</span> run() {
-    <span class="hljs-comment">// the config object will be added automatically to the options</span>
+    <span class="hljs-comment">// emit analytics</span>
     <span class="hljs-keyword">await</span> <span class="hljs-keyword">this</span>.config.runHook(<span class="hljs-string">'analytics'</span>, {<span class="hljs-attr">id</span>: <span class="hljs-string">'my_command'</span>})
-    <span class="hljs-comment">//...</span>
   }
 }
-<span class="hljs-comment">//...</span>
 </code></pre>
 <p>If you need to exit during a hook, use <code>this.error()</code> or <code>this.exit()</code>. Otherwise the hook will just emit a warning. This is to prevent an issue such as a plugin failing in <code>init</code> causing the entire CLI to not function.</p>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="topics.html">← Topics</a><a class="docs-next button" href="plugins.html">Plugins →</a></div></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by Heroku</div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
