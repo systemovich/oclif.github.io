@@ -26,5 +26,6 @@
 <url> <loc>https://oclif.github.io/docs/releasing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/releasing.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/running_programmatically.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/running_programmatically.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/single.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/single.html" /> </url>
+<url> <loc>https://oclif.github.io/docs/testing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/testing.html" /> </url>
 <url> <loc>https://oclif.github.io/docs/topics.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/topics.html" /> </url>
 </urlset>
