@@ -38,7 +38,7 @@
     parse: <span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> <span class="hljs-string">'output'</span>,     <span class="hljs-comment">// instead of the user input, return a different value</span>
     <span class="hljs-keyword">default</span>: <span class="hljs-string">'world'</span>,             <span class="hljs-comment">// default value if flag not passed</span>
     required: <span class="hljs-literal">false</span>,              <span class="hljs-comment">// make flag required (this is not common and you should probably use an argument instead)</span>
-    dependsOn: [<span class="hljs-string">'extra-flag'</span>],    <span class="hljs-comment">// this flag require on another flag</span>
+    dependsOn: [<span class="hljs-string">'extra-flag'</span>],    <span class="hljs-comment">// this flag requires another flag</span>
   }),
 
   <span class="hljs-comment">// flag with no value (-f, --force)</span>
