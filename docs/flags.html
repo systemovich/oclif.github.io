@@ -47,6 +47,7 @@
     <span class="hljs-keyword">default</span>: <span class="hljs-string">'world'</span>,             <span class="hljs-comment">// default value if flag not passed</span>
     required: <span class="hljs-literal">false</span>,              <span class="hljs-comment">// make flag required (this is not common and you should probably use an argument instead)</span>
     dependsOn: [<span class="hljs-string">'extra-flag'</span>],    <span class="hljs-comment">// this flag requires another flag</span>
+    exclusive: [<span class="hljs-string">'extra-flag'</span>],    <span class="hljs-comment">// this flag cannot be specified alongside this other flag</span>
   }),
 
   <span class="hljs-comment">// flag with no value (-f, --force)</span>
