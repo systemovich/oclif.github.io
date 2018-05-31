@@ -34,22 +34,13 @@
   }
 }
 </code></pre>
-<p>Another common tool we like to use in testing oclif CLIs is <a href="https://github.com/node-nock/nock">nock</a>. Before we can use fancy-test with nock though, we need to register the nock plugin as it's optional. Install the packages <code>@fancy-test/nock</code>, <code>nock</code>, and for TypeScript, <code>@types/nock</code> as devDependencies.</p>
-<p>To share @oclif/test registered with nock, we have a helper file with the following:</p>
-<p><strong>test/test.ts</strong></p>
-<pre><code class="hljs css typescript"><span class="hljs-keyword">import</span> Nock <span class="hljs-keyword">from</span> <span class="hljs-string">'@fancy-test/nock'</span>
-<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> Test <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/test'</span>
-<span class="hljs-keyword">export</span> {expect} <span class="hljs-keyword">from</span> <span class="hljs-string">'@oclif/test'</span>
-
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> test = Test.test
-.register(<span class="hljs-string">'nock'</span>, Nock)
-</code></pre>
-<p>Finally here is the test code</p>
+<p>Another common tool we like to use in testing oclif CLIs is <a href="https://github.com/node-nock/nock">nock</a>. Install the <code>nock</code> package as a devDependency.</p>
+<p>Here is the test code</p>
 <p><strong>test/commands/whoami.ts</strong></p>
-<pre><code class="hljs css typescript"><span class="hljs-keyword">import</span> {expect, test} <span class="hljs-keyword">from</span> <span class="hljs-string">'../test'</span>
+<pre><code class="hljs css typescript"><span class="hljs-keyword">import</span> {expect, fancy} <span class="hljs-keyword">from</span> <span class="hljs-string">'fancy-test'</span>
 
 describe(<span class="hljs-string">'auth:whoami'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-  test
+  fancy
   .nock(<span class="hljs-string">'https://api.heroku.com'</span>, <span class="hljs-function"><span class="hljs-params">api</span> =&gt;</span> api
     .get(<span class="hljs-string">'/account'</span>)
     <span class="hljs-comment">// user is logged in, return their name</span>
@@ -61,7 +52,7 @@ describe(<span class="hljs-string">'auth:whoami'</span>, <span class="hljs-funct
     expect(ctx.stdout).to.equal(<span class="hljs-string">'jeff@example.com\n'</span>)
   })
 
-  test
+  fancy
   .nock(<span class="hljs-string">'https://api.heroku.com'</span>, <span class="hljs-function"><span class="hljs-params">api</span> =&gt;</span> api
     .get(<span class="hljs-string">'/account'</span>)
     <span class="hljs-comment">// HTTP 401 means the user is not logged in with valid credentials</span>
