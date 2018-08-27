@@ -14,9 +14,7 @@
         <link href="https://oclif.github.io/blog/2018/03/20/introducing-oclif.html">
         </link>
         <updated>2018-03-20T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p><img src="/img/2018-03-20-introducing-oclif/header.png" alt="Introducing oclif"></p>
-<p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the eff</p>
-]]></summary>
+        <summary type="html"><![CDATA[<p><img src="/img/2018-03-20-introducing-oclif/header.png" alt="Introducing oclif"></p> <p>Coding for the browser takes serious time. You need to deal with front-end JS, CSS, design, product, and a ton more. On the other hand, building for a CLI takes a fraction of the effort. This makes CLIs particularly great for prototyping out new fun...</p>]]></summary>
         <author>
             <name>Jeff Dickey</name>
             <uri>https://twitter.com/jdxcode</uri>
