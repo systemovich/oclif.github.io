@@ -65,7 +65,7 @@
     env: <span class="hljs-string">'MY_NAME'</span>,               <span class="hljs-comment">// default to value of environment variable</span>
     options: [<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>],          <span class="hljs-comment">// only allow the value to be from a discrete set</span>
     parse: <span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> <span class="hljs-string">'output'</span>,     <span class="hljs-comment">// instead of the user input, return a different value</span>
-    <span class="hljs-keyword">default</span>: <span class="hljs-string">'world'</span>,             <span class="hljs-comment">// default value if flag not passed</span>
+    <span class="hljs-keyword">default</span>: <span class="hljs-string">'world'</span>,             <span class="hljs-comment">// default value if flag not passed (can be a function that returns a string or undefined)</span>
     required: <span class="hljs-literal">false</span>,              <span class="hljs-comment">// make flag required (this is not common and you should probably use an argument instead)</span>
     dependsOn: [<span class="hljs-string">'extra-flag'</span>],    <span class="hljs-comment">// this flag requires another flag</span>
     exclusive: [<span class="hljs-string">'extra-flag'</span>],    <span class="hljs-comment">// this flag cannot be specified alongside this other flag</span>
@@ -74,6 +74,7 @@
   <span class="hljs-comment">// flag with no value (-f, --force)</span>
   force: flags.boolean({
     <span class="hljs-attr">char</span>: <span class="hljs-string">'f'</span>,
+    <span class="hljs-attr">default</span>: <span class="hljs-literal">true</span>,                <span class="hljs-comment">// default value if flag not passed (can be a function that returns a boolean)</span>
     <span class="hljs-comment">// boolean flags may be reversed with `--no-` (in this case: `--no-force`).</span>
     <span class="hljs-comment">// The flag will be set to false if reversed. This functionality</span>
     <span class="hljs-comment">// is disabled by default, to enable it:</span>
@@ -122,7 +123,7 @@
 <span class="hljs-meta">$</span><span class="bash"> mycli -vffoo</span>
 </code></pre>
 <p>The last one seems a little odd at first glance, but it's relatively standard in unix and makes commands like <code>tar -xvzfmytarball.tar.gz</code> possible.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/args"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/config"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-8-2 19:22:47</p></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/args"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/config"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-17 14:40:44</p></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
               var search = docsearch({
                 
                 apiKey: '433a7758541da1949f63b813ddf5c78c',
