@@ -27,6 +27,7 @@
 <url> <loc>https://oclif.github.io/docs/running_programmatically</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/running_programmatically" /> </url>
 <url> <loc>https://oclif.github.io/docs/single</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/single" /> </url>
 <url> <loc>https://oclif.github.io/docs/spinner</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/spinner" /> </url>
+<url> <loc>https://oclif.github.io/docs/table</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/table" /> </url>
 <url> <loc>https://oclif.github.io/docs/testing</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/testing" /> </url>
 <url> <loc>https://oclif.github.io/docs/topics</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://oclif.github.io/docs/topics" /> </url>
 </urlset>
