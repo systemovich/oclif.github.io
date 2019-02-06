@@ -113,30 +113,63 @@
 </code></pre>
 <p>Displays:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> example-cli users</span>
-Name   Team
-Jordan Sales
-Jamie  Engineering
+Name                     Company
+Leanne Graham            Romaguera-Crona
+Ervin Howell             Deckow-Crist
+Clementine Bauch         Romaguera-Jacobson
+Patricia Lebsack         Robel-Corkery
+Chelsey Dietrich         Keebler LLC
+Mrs. Dennis Schulist     Considine-Lockman
+Kurtis Weissnat          Johns Group
+Nicholas Runolfsdottir V Abernathy Group
+Glenna Reichert          Yost and Sons
+Clementina DuBuque       Hoeger LLC
 <span class="hljs-meta">
 $</span><span class="bash"> example-cli users --extended</span>
-Name   Team        ID
-Jordan Sales       100
-Jamie  Engineering 200
+Name                     Company            ID
+Leanne Graham            Romaguera-Crona    1
+Ervin Howell             Deckow-Crist       2
+Clementine Bauch         Romaguera-Jacobson 3
+Patricia Lebsack         Robel-Corkery      4
+Chelsey Dietrich         Keebler LLC        5
+Mrs. Dennis Schulist     Considine-Lockman  6
+Kurtis Weissnat          Johns Group        7
+Nicholas Runolfsdottir V Abernathy Group    8
+Glenna Reichert          Yost and Sons      9
+Clementina DuBuque       Hoeger LLC         10
 <span class="hljs-meta">
 $</span><span class="bash"> example-cli users --columns=name</span>
 Name
-Jordan
-Jamie
+Leanne Graham
+Ervin Howell
+Clementine Bauch
+Patricia Lebsack
+Chelsey Dietrich
+Mrs. Dennis Schulist
+Kurtis Weissnat
+Nicholas Runolfsdottir V
+Glenna Reichert
+Clementina DuBuque
 <span class="hljs-meta">
-$</span><span class="bash"> example-cli users --filter=<span class="hljs-string">"team=sales"</span></span>
-Name   Team        ID
-Jordan Sales       100
+$</span><span class="bash"> example-cli users --filter=<span class="hljs-string">"company=Group"</span></span>
+Name                     Company
+Kurtis Weissnat          Johns Group
+Nicholas Runolfsdottir V Abernathy Group
 <span class="hljs-meta">
-$</span><span class="bash"> example-cli users --sort=team</span>
-Name   Team        ID
-Jamie  Engineering 200
-Jordan Sales       100
+$</span><span class="bash"> example-cli users --sort=company</span>
+Name                     Company
+Nicholas Runolfsdottir V Abernathy Group
+Mrs. Dennis Schulist     Considine-Lockman
+Ervin Howell             Deckow-Crist
+Clementina DuBuque       Hoeger LLC
+Kurtis Weissnat          Johns Group
+Chelsey Dietrich         Keebler LLC
+Patricia Lebsack         Robel-Corkery
+Leanne Graham            Romaguera-Crona
+Clementine Bauch         Romaguera-Jacobson
+Glenna Reichert          Yost and Sons
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spinner"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/notifications"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2019-2-4 14:35:26</p></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/spinner"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/notifications"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2019-2-6 16:38:00</p></div></div></div><footer class="footer pb3"><div class="mw6 center tc dark-gray f6 bt b--lighter-gray pt3">Made with 💜 by <a class="blue" href="https://www.heroku.com/home">Heroku</a> — <a class="blue" href="https://github.com/oclif/oclif/blob/master/LICENSE">MIT License</a></div></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
               var search = docsearch({
                 
                 apiKey: '433a7758541da1949f63b813ddf5c78c',
