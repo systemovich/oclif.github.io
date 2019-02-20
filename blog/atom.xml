@@ -2,12 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://oclif.github.io/blog</id>
     <title>oclif: The Open CLI Framework Blog</title>
-    <updated>2018-03-20T06:00:00Z</updated>
+    <updated>2019-02-20T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://oclif.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest oclif: The Open CLI Framework news and events.</subtitle>
     <logo>https://oclif.github.io/img/oclif_rev.svg</logo>
     <rights>Copyright © 2019 Salesforce.com</rights>
+    <entry>
+        <title type="html"><![CDATA[CLI Flags Explained]]></title>
+        <id>https://oclif.github.io/blog/2019/02/20/cli-flags-explained.html</id>
+        <link href="https://oclif.github.io/blog/2019/02/20/cli-flags-explained.html">
+        </link>
+        <updated>2019-02-20T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><code>oclif</code> makes it easy to create a command line interface (CLI) in node. Most commands have <strong>parameters</strong> — also known as &quot;flags&quot;, &quot;args&quot;, and sometimes &quot;options&quot;. This blog post explains what these parameters are and when to ...</p>]]></summary>
+        <author>
+            <name>Casey Watts and Jeff Dickey</name>
+            <uri>https://twitter.com/kyloma</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Introducing oclif]]></title>
         <id>https://oclif.github.io/blog/2018/03/20/introducing-oclif.html</id>
